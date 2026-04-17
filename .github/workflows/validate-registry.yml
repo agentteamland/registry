@@ -1,0 +1,82 @@
+name: Validate Registry
+
+on:
+  push:
+    branches: [main]
+    paths: ["teams.json", "schemas/**"]
+  pull_request:
+    paths: ["teams.json", "schemas/**"]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install ajv-cli
+        run: npm install --global ajv-cli ajv-formats
+
+      - name: 1/4 — Validate teams.json against registry schema
+        run: ajv validate -c ajv-formats -s schemas/registry.schema.json -d teams.json --spec=draft2020 --strict=false
+
+      - name: 2/4 — Check for duplicate team names
+        run: |
+          node -e "
+            const fs = require('fs');
+            const d = JSON.parse(fs.readFileSync('teams.json', 'utf8'));
+            const names = d.teams.map(t => t.name);
+            const dupes = names.filter((n, i) => names.indexOf(n) !== i);
+            if (dupes.length) { console.error('Duplicate team names:', dupes); process.exit(1); }
+            console.log('No duplicates.');
+          "
+
+      - name: 3/4 — Check each repo URL is reachable
+        run: |
+          set -e
+          node -e "
+            const fs = require('fs');
+            const d = JSON.parse(fs.readFileSync('teams.json', 'utf8'));
+            d.teams.forEach(t => { console.log(t.name + ' -> ' + t.repo); });
+          "
+          FAILED=0
+          for url in $(node -e "const d=require('./teams.json'); d.teams.forEach(t=>console.log(t.repo))"); do
+            code=$(curl -sfL -o /dev/null -w "%{http_code}" "$url" || echo "000")
+            if [ "$code" = "200" ]; then
+              echo "  ✓ $url"
+            else
+              echo "  ✗ $url (HTTP $code)"
+              FAILED=$((FAILED+1))
+            fi
+          done
+          if [ $FAILED -gt 0 ]; then exit 1; fi
+
+      - name: 4/4 — Fetch each team's remote team.json and validate it against team schema
+        run: |
+          set -e
+          curl -sfL -o team.schema.json https://raw.githubusercontent.com/agentteamland/core/main/schemas/team.schema.json
+          FAILED=0
+          for entry in $(node -e "const d=require('./teams.json'); d.teams.forEach(t=>console.log(t.name+'|'+t.repo))"); do
+            name="${entry%|*}"
+            repo="${entry#*|}"
+            repo_clean="${repo%.git}"
+            raw_url="${repo_clean/https:\/\/github.com/https:\/\/raw.githubusercontent.com}/main/team.json"
+            echo "  Fetching $name from $raw_url"
+            if curl -sfL -o remote-team.json "$raw_url"; then
+              if ajv validate -c ajv-formats -s team.schema.json -d remote-team.json --spec=draft2020 --strict=false; then
+                echo "    ✓ $name team.json is valid"
+              else
+                echo "    ✗ $name team.json failed schema validation"
+                FAILED=$((FAILED+1))
+              fi
+            else
+              echo "    ✗ $name — could not fetch team.json from main branch"
+              FAILED=$((FAILED+1))
+            fi
+            rm -f remote-team.json
+          done
+          if [ $FAILED -gt 0 ]; then exit 1; fi
+          echo "All remote team.json manifests valid."
