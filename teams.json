@@ -1,12 +1,12 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-04-17T14:00:00Z",
+  "updatedAt": "2026-04-18T22:30:00Z",
   "teams": [
     {
       "name": "software-project-team",
       "repo": "https://github.com/agentteamland/software-project-team",
       "description": "13 specialized agents for production-grade full-stack software projects: .NET 9 + Flutter + React + Postgres + RabbitMQ + Redis + Elasticsearch + MinIO.",
-      "latestVersion": "1.0.0",
+      "latestVersion": "1.0.1",
       "author": "agentteamland",
       "authorUrl": "https://github.com/agentteamland",
       "keywords": ["dotnet", "docker", "full-stack", "clean-architecture", "vertical-slice", "flutter", "react", "microservices"],
