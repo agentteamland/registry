@@ -18,7 +18,7 @@
       "name": "design-system-team",
       "repo": "https://github.com/agentteamland/design-system-team",
       "description": "Design systems and UI prototypes inside any project — local, file-based, browser-viewable. /dst skills produce ds.json state and Tailwind-rendered HTML detail pages under .dst/.",
-      "latestVersion": "0.3.1",
+      "latestVersion": "0.3.2",
       "author": "agentteamland",
       "authorUrl": "https://github.com/agentteamland",
       "keywords": ["design-system", "prototyping", "ui", "tailwind", "tokens", "claude-design-alternative"],
