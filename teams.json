@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-04-19T20:50:00Z",
+  "updatedAt": "2026-04-22T03:50:00Z",
   "teams": [
     {
       "name": "software-project-team",
@@ -13,6 +13,18 @@
       "homepage": "https://github.com/agentteamland/software-project-team",
       "status": "verified",
       "addedAt": "2026-04-17"
+    },
+    {
+      "name": "design-system-team",
+      "repo": "https://github.com/agentteamland/design-system-team",
+      "description": "Design systems and UI prototypes inside any project — local, file-based, browser-viewable. /dst skills produce ds.json state and Tailwind-rendered HTML detail pages under .dst/.",
+      "latestVersion": "0.2.0",
+      "author": "agentteamland",
+      "authorUrl": "https://github.com/agentteamland",
+      "keywords": ["design-system", "prototyping", "ui", "tailwind", "tokens", "claude-design-alternative"],
+      "homepage": "https://github.com/agentteamland/design-system-team",
+      "status": "verified",
+      "addedAt": "2026-04-22"
     }
   ]
 }
