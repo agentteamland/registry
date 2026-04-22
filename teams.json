@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-04-22T04:30:00Z",
+  "updatedAt": "2026-04-22T12:00:00Z",
   "teams": [
     {
       "name": "software-project-team",
@@ -17,8 +17,8 @@
     {
       "name": "design-system-team",
       "repo": "https://github.com/agentteamland/design-system-team",
-      "description": "Design systems and UI prototypes inside any project — local, file-based, browser-viewable. /dst skills produce ds.json state and Tailwind-rendered HTML detail pages under .dst/.",
-      "latestVersion": "0.3.2",
+      "description": "Design systems and UI prototypes inside any project — local, file-based, browser-viewable. /dst-* skills produce ds.json + prototype.json state and Tailwind-rendered HTML pages under .dst/. v0.4.0 adds self-healing /dst-init (safe upgrades) and /dst-handoff (one-command design→code via flutter-agent / react-agent).",
+      "latestVersion": "0.4.0",
       "author": "agentteamland",
       "authorUrl": "https://github.com/agentteamland",
       "keywords": ["design-system", "prototyping", "ui", "tailwind", "tokens", "claude-design-alternative"],
