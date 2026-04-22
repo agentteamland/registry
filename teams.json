@@ -1,12 +1,12 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-04-22T12:00:00Z",
+  "updatedAt": "2026-04-23T00:00:00Z",
   "teams": [
     {
       "name": "software-project-team",
       "repo": "https://github.com/agentteamland/software-project-team",
-      "description": "13 specialized agents for production-grade full-stack software projects: .NET 9 + Flutter + React + Postgres + RabbitMQ + Redis + Elasticsearch + MinIO.",
-      "latestVersion": "1.1.0",
+      "description": "13 specialized agents for production-grade full-stack software projects: .NET 9 + Flutter + React + Postgres + RabbitMQ + Redis + Elasticsearch + MinIO. v1.1.1 closes 7 scaffold-drift bugs surfaced by a fresh Mac smoke (csproj package refs, Alpine globalization trap, connection-string naming contract, consumer-host RMQ race, ES index double-dash).",
+      "latestVersion": "1.1.1",
       "author": "agentteamland",
       "authorUrl": "https://github.com/agentteamland",
       "keywords": ["dotnet", "docker", "full-stack", "clean-architecture", "vertical-slice", "flutter", "react", "microservices"],
