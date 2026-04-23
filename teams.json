@@ -1,12 +1,12 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-04-23T00:00:00Z",
+  "updatedAt": "2026-04-23T12:00:00Z",
   "teams": [
     {
       "name": "software-project-team",
       "repo": "https://github.com/agentteamland/software-project-team",
-      "description": "13 specialized agents for production-grade full-stack software projects: .NET 9 + Flutter + React + Postgres + RabbitMQ + Redis + Elasticsearch + MinIO. v1.1.1 closes 7 scaffold-drift bugs surfaced by a fresh Mac smoke (csproj package refs, Alpine globalization trap, connection-string naming contract, consumer-host RMQ race, ES index double-dash).",
-      "latestVersion": "1.1.1",
+      "description": "13 specialized agents for production-grade full-stack software projects: .NET 9 + Flutter + React + Postgres + RabbitMQ + Redis + Elasticsearch + MinIO. v1.1.2 adds DST handoff knowledge (flutter-agent + react-agent) — describes the design-system-team bundle shape and the mandatory theme-sync step before screen integration.",
+      "latestVersion": "1.1.2",
       "author": "agentteamland",
       "authorUrl": "https://github.com/agentteamland",
       "keywords": ["dotnet", "docker", "full-stack", "clean-architecture", "vertical-slice", "flutter", "react", "microservices"],
@@ -17,8 +17,8 @@
     {
       "name": "design-system-team",
       "repo": "https://github.com/agentteamland/design-system-team",
-      "description": "Design systems and UI prototypes inside any project — local, file-based, browser-viewable. /dst-* skills produce ds.json + prototype.json state and Tailwind-rendered HTML pages under .dst/. v0.4.0 adds self-healing /dst-init (safe upgrades) and /dst-handoff (one-command design→code via flutter-agent / react-agent).",
-      "latestVersion": "0.4.0",
+      "description": "Design systems and UI prototypes inside any project — local, file-based, browser-viewable. /dst-* skills produce ds.json + prototype.json state and Tailwind-rendered HTML pages under .dst/. v0.4.1 makes /dst-handoff require a theme-sync step before screen integration (so the generated code actually renders the DS brand).",
+      "latestVersion": "0.4.1",
       "author": "agentteamland",
       "authorUrl": "https://github.com/agentteamland",
       "keywords": ["design-system", "prototyping", "ui", "tailwind", "tokens", "claude-design-alternative"],
