@@ -17,8 +17,8 @@
     {
       "name": "design-system-team",
       "repo": "https://github.com/agentteamland/design-system-team",
-      "description": "Design systems and UI prototypes inside any project — local, file-based, browser-viewable. /dst-* skills produce ds.json + prototype.json state and Tailwind-rendered HTML pages under .dst/. v0.4.1 makes /dst-handoff require a theme-sync step before screen integration (so the generated code actually renders the DS brand).",
-      "latestVersion": "0.4.1",
+      "description": "Local file-based design systems and UI prototypes inside any project. /dst-* skills produce ds.json + prototype.json state and Tailwind-rendered HTML pages under .dst/. v0.6.0 refactors templates into per-component partials and grows the catalog to 57 components across 7 groups (adds Charts as the 7th group + 12 Tier 1 primitives).",
+      "latestVersion": "0.6.0",
       "author": "agentteamland",
       "authorUrl": "https://github.com/agentteamland",
       "keywords": ["design-system", "prototyping", "ui", "tailwind", "tokens", "claude-design-alternative"],
