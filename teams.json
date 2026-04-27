@@ -17,8 +17,8 @@
     {
       "name": "design-system-team",
       "repo": "https://github.com/agentteamland/design-system-team",
-      "description": "Local file-based design systems + UI prototypes for any project. /dst-* skills produce ds.json + prototype.json + Tailwind HTML under .dst/. v0.6.0: 57 components, 7 groups (Charts new), partials.",
-      "latestVersion": "0.6.0",
+      "description": "Local file-based design systems + UI prototypes for any project. /dst-* skills produce ds.json + prototype.json + Tailwind HTML under .dst/. v0.7.0: open-questions pinning to CLAUDE.md.",
+      "latestVersion": "0.7.0",
       "author": "agentteamland",
       "authorUrl": "https://github.com/agentteamland",
       "keywords": ["design-system", "prototyping", "ui", "tailwind", "tokens", "claude-design-alternative"],
