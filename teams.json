@@ -5,7 +5,7 @@
     {
       "name": "software-project-team",
       "repo": "https://github.com/agentteamland/software-project-team",
-      "description": "13 specialized agents for production-grade full-stack software projects: .NET 9 + Flutter + React + Postgres + RabbitMQ + Redis + Elasticsearch + MinIO. v1.1.3 ships DST handoff knowledge (flutter-agent + react-agent) — describes the design-system-team bundle shape and the mandatory theme-sync step before screen integration.",
+      "description": "13 agents for full-stack projects: .NET 9 + Flutter + React + Postgres + RabbitMQ + Redis + Elasticsearch + MinIO. v1.1.3 wires DST handoff (flutter + react agents) with mandatory theme-sync.",
       "latestVersion": "1.1.3",
       "author": "agentteamland",
       "authorUrl": "https://github.com/agentteamland",
@@ -17,7 +17,7 @@
     {
       "name": "design-system-team",
       "repo": "https://github.com/agentteamland/design-system-team",
-      "description": "Local file-based design systems and UI prototypes inside any project. /dst-* skills produce ds.json + prototype.json state and Tailwind-rendered HTML pages under .dst/. v0.6.0 refactors templates into per-component partials and grows the catalog to 57 components across 7 groups (adds Charts as the 7th group + 12 Tier 1 primitives).",
+      "description": "Local file-based design systems + UI prototypes for any project. /dst-* skills produce ds.json + prototype.json + Tailwind HTML under .dst/. v0.6.0: 57 components, 7 groups (Charts new), partials.",
       "latestVersion": "0.6.0",
       "author": "agentteamland",
       "authorUrl": "https://github.com/agentteamland",
