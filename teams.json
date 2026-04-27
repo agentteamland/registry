@@ -5,8 +5,8 @@
     {
       "name": "software-project-team",
       "repo": "https://github.com/agentteamland/software-project-team",
-      "description": "13 specialized agents for production-grade full-stack software projects: .NET 9 + Flutter + React + Postgres + RabbitMQ + Redis + Elasticsearch + MinIO. v1.1.2 adds DST handoff knowledge (flutter-agent + react-agent) — describes the design-system-team bundle shape and the mandatory theme-sync step before screen integration.",
-      "latestVersion": "1.1.2",
+      "description": "13 specialized agents for production-grade full-stack software projects: .NET 9 + Flutter + React + Postgres + RabbitMQ + Redis + Elasticsearch + MinIO. v1.1.3 ships DST handoff knowledge (flutter-agent + react-agent) — describes the design-system-team bundle shape and the mandatory theme-sync step before screen integration.",
+      "latestVersion": "1.1.3",
       "author": "agentteamland",
       "authorUrl": "https://github.com/agentteamland",
       "keywords": ["dotnet", "docker", "full-stack", "clean-architecture", "vertical-slice", "flutter", "react", "microservices"],
