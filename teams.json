@@ -1,12 +1,12 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-04-23T12:00:00Z",
+  "updatedAt": "2026-04-28T18:30:00Z",
   "teams": [
     {
       "name": "software-project-team",
       "repo": "https://github.com/agentteamland/software-project-team",
-      "description": "13 agents for full-stack projects: .NET 9 + Flutter + React + Postgres + RabbitMQ + Redis + Elasticsearch + MinIO. v1.1.4 closes 4 cold-build scaffold gaps blocking verify-system on fresh projects.",
-      "latestVersion": "1.1.4",
+      "description": "13 agents for full-stack projects: .NET 9 + Flutter + React + Postgres + RabbitMQ + Redis + Elasticsearch + MinIO. v1.1.5: verify-system Level 0 catches compose drift before runtime checks.",
+      "latestVersion": "1.1.5",
       "author": "agentteamland",
       "authorUrl": "https://github.com/agentteamland",
       "keywords": ["dotnet", "docker", "full-stack", "clean-architecture", "vertical-slice", "flutter", "react", "microservices"],

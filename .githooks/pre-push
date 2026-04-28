@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+# Pre-push hook: refuse to push if teams.json fails local validation.
+# Activate once per clone with: git config core.hooksPath .githooks
+# (See CONTRIBUTING.md.)
+
+set -e
+
+cd "$(git rev-parse --show-toplevel)"
+
+# Only run if teams.json or schemas changed in any commit being pushed.
+range_modified=$(git diff --name-only @{push}..HEAD 2>/dev/null || git diff --name-only origin/main..HEAD 2>/dev/null || echo "teams.json")
+
+case "$range_modified" in
+  *teams.json*|*schemas/*)
+    echo "[pre-push] teams.json or schema changed — running scripts/validate.sh"
+    ./scripts/validate.sh
+    ;;
+  *)
+    : # nothing relevant changed; let the push proceed
+    ;;
+esac
