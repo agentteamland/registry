@@ -5,7 +5,7 @@
     {
       "name": "software-project-team",
       "repo": "https://github.com/agentteamland/software-project-team",
-      "description": "13 agents for full-stack projects: .NET 9 + Flutter + React + Postgres + RabbitMQ + Redis + Elasticsearch + MinIO. v1.1.5 adds verify-system Level 0: static compose-drift checks (health-gated deps + shared-project shadow volumes) before runtime verification.",
+      "description": "13 agents for full-stack projects: .NET 9 + Flutter + React + Postgres + RabbitMQ + Redis + Elasticsearch + MinIO. v1.1.5: verify-system Level 0 catches compose drift before runtime checks.",
       "latestVersion": "1.1.5",
       "author": "agentteamland",
       "authorUrl": "https://github.com/agentteamland",

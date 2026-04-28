@@ -51,12 +51,22 @@ Open `teams.json` and add your entry to the `teams` array:
 - `status` — always start with `"community"`. Maintainers promote to `"verified"` after review.
 - `addedAt` — the date you open the PR (ISO `YYYY-MM-DD`).
 
-### 3. Validate locally (optional but recommended)
+### 3. Validate locally (strongly recommended)
+
+A helper script runs the same offline checks the CI runs:
 
 ```bash
-npm install -g ajv-cli ajv-formats
-ajv validate -c ajv-formats -s schemas/registry.schema.json -d teams.json --spec=draft2020 --strict=false
+npm install -g ajv-cli ajv-formats   # one-time, only if you don't have ajv
+./scripts/validate.sh
 ```
+
+**Even better — wire it into `git push` so you can never push an invalid `teams.json`:**
+
+```bash
+git config core.hooksPath .githooks   # one-time per clone
+```
+
+After this, every `git push` that touches `teams.json` or `schemas/` runs `./scripts/validate.sh` and aborts the push if validation fails. The most common failure is the `description` field exceeding 200 characters — `description.maxLength = 200` in [schemas/registry.schema.json](schemas/registry.schema.json). Catch it locally instead of in a failed PR check.
 
 ### 4. Commit and open a PR
 
