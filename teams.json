@@ -1,12 +1,12 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-05-02T12:00:00Z",
+  "updatedAt": "2026-05-02T18:00:00Z",
   "teams": [
     {
       "name": "software-project-team",
       "repo": "https://github.com/agentteamland/software-project-team",
-      "description": "13 agents for full-stack projects: .NET 9 + Flutter + React + Postgres + RabbitMQ + Redis + Elasticsearch + MinIO. v1.2.0: agent KB sections auto-rebuilt from children frontmatter.",
-      "latestVersion": "1.2.0",
+      "description": "13 agents for full-stack projects: .NET 9 + Flutter + React + Postgres + RabbitMQ + Redis + Elasticsearch + MinIO. KB sections auto-rebuilt from frontmatter.",
+      "latestVersion": "1.2.1",
       "author": "agentteamland",
       "authorUrl": "https://github.com/agentteamland",
       "keywords": ["dotnet", "docker", "full-stack", "clean-architecture", "vertical-slice", "flutter", "react", "microservices"],
@@ -17,8 +17,8 @@
     {
       "name": "design-system-team",
       "repo": "https://github.com/agentteamland/design-system-team",
-      "description": "Local file-based design systems + UI prototypes for any project. /dst-* skills produce ds.json + prototype.json + Tailwind HTML under .dst/. v0.8.0: agent KB auto-rebuilt from frontmatter.",
-      "latestVersion": "0.8.0",
+      "description": "Local file-based design systems + UI prototypes for any project. /dst-* skills produce ds.json + prototype.json + Tailwind HTML under .dst/.",
+      "latestVersion": "0.8.1",
       "author": "agentteamland",
       "authorUrl": "https://github.com/agentteamland",
       "keywords": ["design-system", "prototyping", "ui", "tailwind", "tokens", "claude-design-alternative"],
